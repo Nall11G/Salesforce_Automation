@@ -5,8 +5,8 @@ Resource  ../Page_Objects/Common_Configure.robot
 Resource  ../Page_Objects/Contact.robot
 Resource  ../Page_Objects/Account.robot
 Library     ../CustomLibrary/Contact.py
-Library     ../CustomLibrary/AccountLibrary.py
-Library     ../CustomLibrary/DonationLibrary.py
+#Library     ../CustomLibrary/AccountLibrary.py
+#Library     ../CustomLibrary/DonationLibrary.py
 Library     ../CustomLibrary/DemoExcel.py
 #Variables   ../TestCases/Var.robot
 Resource   ../TestCases/Var.robot
@@ -23,23 +23,23 @@ ${HoH_Error_Alert}    The Head of Household flag should be true for this Contact
 #TC_01
     #[Tags]  Demo
     Login With Username And Password(1)
-    ${FirstName}=    excelinput  Contact     TC1    FirstName
+    ${FirstName}=    read_excel_data  Contact     TC1    FirstName
     Set Global Variable   ${FirstName}
-    ${LastName}=    excelinput  Contact      TC1    LastName
+    ${LastName}=    read_excel_data  Contact      TC1    LastName
     Set Global Variable     ${LastName}
-    ${SpouseName}=  excelinput  Contact     TC1     SpouseName
+    ${SpouseName}=  read_excel_data  Contact     TC1     SpouseName
     Set Global Variable  ${SpouseName}
-    ${Mail_Street}=  excelinput  Contact     TC1     MailingStreet
+    ${Mail_Street}=  read_excel_data  Contact     TC1     MailingStreet
     Set Global Variable  ${Mail_Street}
-    ${Mail_City}=   excelinput  Contact     TC1     MailingCity
+    ${Mail_City}=   read_excel_data  Contact     TC1     MailingCity
     set global variable  ${Mail_City}
-    ${Mail_State}=  excelinput  Contact     TC1     MailingState
+    ${Mail_State}=  read_excel_data  Contact     TC1     MailingState
     set global variable  ${Mail_State}
-    ${Mail_Code}=   excelinput  Contact     TC1     MailingZipCode
+    ${Mail_Code}=   read_excel_data  Contact     TC1     MailingZipCode
     set global variable  ${Mail_Code}
-    ${Mail_Country}=    excelinput  Contact     TC1    MailingCountry
+    ${Mail_Country}=    read_excel_data  Contact     TC1    MailingCountry
     set global variable  ${Mail_Country}
-    ${Contact_Email}=   excelinput  Contact     TC1     Email
+    ${Contact_Email}=   read_excel_data  Contact     TC1     Email
     set global variable  ${Contact_Email}
     Contact Creation
     #Close Browser
