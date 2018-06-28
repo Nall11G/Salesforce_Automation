@@ -5,8 +5,6 @@ Resource  ../Page_Objects/Common_Configure.robot
 Resource  ../Page_Objects/Contact.robot
 Resource  ../Page_Objects/Account.robot
 Library     ../CustomLibrary/Contact.py
-#Library     ../CustomLibrary/AccountLibrary.py
-#Library     ../CustomLibrary/DonationLibrary.py
 Library     ../CustomLibrary/DemoExcel.py
 #Variables   ../TestCases/Var.robot
 Resource   ../TestCases/Var.robot
