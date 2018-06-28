@@ -20,7 +20,7 @@ ${HoH_Error_Alert}    The Head of Household flag should be true for this Contact
 
 
 *** Test Cases ***
-#TC_01
+TC_01
     #[Tags]  Demo
     Login With Username And Password(1)
     ${FirstName}=    read_excel_data  Contact     TC1    FirstName
@@ -69,7 +69,7 @@ TC_02
     Contact Creation
     #Close Browser
 
-#Tc_03
+Tc_03
     [Tags]  Demo
     #Login With Username And Password(1)
     ${Acc_Name}=    read_excel_data   Account     TC5     AccountName
