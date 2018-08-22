@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180822 16:34:45.632" generator="Robot 3.0.4 (Python 2.7.10 on win32)">
+<suite source="C:\Users\Mstemp120\Downloads\Salesforce_Automation-Saleforce_Demo\Projects\ADF_Project\src\TestCases\RegressionTestSuite.robot" id="s1" name="RegressionTestSuite">
+<test id="s1-t1" name="TC1">
+<kw type="setup" name="Login With Username And Password(1)" library="Common_Configure">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180822 16:34:46.037" level="INFO">Opening browser 'chrome' to base url 'https://test.salesforce.com'</msg>
+<status status="PASS" endtime="20180822 16:34:54.047" starttime="20180822 16:34:46.037"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180822 16:34:55.211" starttime="20180822 16:34:54.048"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${UsernameElement}</arg>
+<arg>nallavan@mstsolutions.com.qarel</arg>
+</arguments>
+<msg timestamp="20180822 16:34:55.212" level="INFO">Typing text 'nallavan@mstsolutions.com.qarel' into text field 'Id=username'</msg>
+<status status="PASS" endtime="20180822 16:34:55.753" starttime="20180822 16:34:55.211"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PasswordElement}</arg>
+<arg>metasoft@12</arg>
+</arguments>
+<msg timestamp="20180822 16:34:55.753" level="INFO">Typing text 'metasoft@12' into text field 'Id=password'</msg>
+<status status="PASS" endtime="20180822 16:34:56.115" starttime="20180822 16:34:55.753"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<msg timestamp="20180822 16:34:56.116" level="INFO">Clicking button 'Id=Login'.</msg>
+<status status="PASS" endtime="20180822 16:35:02.158" starttime="20180822 16:34:56.116"></status>
+</kw>
+<status status="PASS" endtime="20180822 16:35:02.158" starttime="20180822 16:34:46.036"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>FirstName</arg>
+</arguments>
+<assign>
+<var>${FirstName_V1}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.159" level="INFO">${FirstName_V1} = Test Contact6</msg>
+<status status="PASS" endtime="20180822 16:35:02.159" starttime="20180822 16:35:02.159"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${FirstName_V1}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.161" level="INFO">${FirstName_V1} = Test Contact6</msg>
+<status status="PASS" endtime="20180822 16:35:02.161" starttime="20180822 16:35:02.160"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>LastName</arg>
+</arguments>
+<assign>
+<var>${LastName_V1}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.162" level="INFO">${LastName_V1} = QA10</msg>
+<status status="PASS" endtime="20180822 16:35:02.162" starttime="20180822 16:35:02.161"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${LastName_V1}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.163" level="INFO">${LastName_V1} = QA10</msg>
+<status status="PASS" endtime="20180822 16:35:02.164" starttime="20180822 16:35:02.163"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>SpouseName</arg>
+</arguments>
+<assign>
+<var>${SpouseName_V1}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.165" level="INFO">${SpouseName_V1} = Test1</msg>
+<status status="PASS" endtime="20180822 16:35:02.165" starttime="20180822 16:35:02.164"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${SpouseName_V1}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.166" level="INFO">${SpouseName_V1} = Test1</msg>
+<status status="PASS" endtime="20180822 16:35:02.166" starttime="20180822 16:35:02.166"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>MailingStreet</arg>
+</arguments>
+<assign>
+<var>${Mail_Street_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.167" level="INFO">${Mail_Street_V} = Test Mailing Street 11</msg>
+<status status="PASS" endtime="20180822 16:35:02.167" starttime="20180822 16:35:02.167"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_Street_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.168" level="INFO">${Mail_Street_V} = Test Mailing Street 11</msg>
+<status status="PASS" endtime="20180822 16:35:02.169" starttime="20180822 16:35:02.168"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>MailingCity</arg>
+</arguments>
+<assign>
+<var>${Mail_City_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.171" level="INFO">${Mail_City_V} = Test Mailing City1</msg>
+<status status="PASS" endtime="20180822 16:35:02.171" starttime="20180822 16:35:02.170"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_City_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.172" level="INFO">${Mail_City_V} = Test Mailing City1</msg>
+<status status="PASS" endtime="20180822 16:35:02.172" starttime="20180822 16:35:02.172"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>MailingState</arg>
+</arguments>
+<assign>
+<var>${Mail_State_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.173" level="INFO">${Mail_State_V} = Test State 1</msg>
+<status status="PASS" endtime="20180822 16:35:02.173" starttime="20180822 16:35:02.173"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_State_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.174" level="INFO">${Mail_State_V} = Test State 1</msg>
+<status status="PASS" endtime="20180822 16:35:02.174" starttime="20180822 16:35:02.174"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>MailingZipCode</arg>
+</arguments>
+<assign>
+<var>${Mail_Code_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.175" level="INFO">${Mail_Code_V} = 77422</msg>
+<status status="PASS" endtime="20180822 16:35:02.175" starttime="20180822 16:35:02.175"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_Code_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.176" level="INFO">${Mail_Code_V} = 77422</msg>
+<status status="PASS" endtime="20180822 16:35:02.176" starttime="20180822 16:35:02.176"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>MailingCountry</arg>
+</arguments>
+<assign>
+<var>${Mail_Country_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.177" level="INFO">${Mail_Country_V} = Test Country</msg>
+<status status="PASS" endtime="20180822 16:35:02.177" starttime="20180822 16:35:02.177"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_Country_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.178" level="INFO">${Mail_Country_V} = Test Country</msg>
+<status status="PASS" endtime="20180822 16:35:02.178" starttime="20180822 16:35:02.178"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC1</arg>
+<arg>Email</arg>
+</arguments>
+<assign>
+<var>${Contact_Email_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:02.179" level="INFO">${Contact_Email_V} = nallavan24@yopmail.com</msg>
+<status status="PASS" endtime="20180822 16:35:02.179" starttime="20180822 16:35:02.179"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Contact_Email_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:02.180" level="INFO">${Contact_Email_V} = nallavan24@yopmail.com</msg>
+<status status="PASS" endtime="20180822 16:35:02.180" starttime="20180822 16:35:02.180"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180822 16:35:05.477" starttime="20180822 16:35:02.181"></status>
+</kw>
+<doc>*Functionality*
+To verify whether the household account record is created or not when creating a household contact
+*Steps*
+1. Open the new instance sandbox "test.salesforce.com"
+2. Enter the username and password
+3. Click login button
+4. Click new button and then choose the recortype
+5. Click continue button
+6. Enter the firstname, last name and other details
+7. Click save buttom
+8. Verif the expected result
+*Expected Result*
+Household account record should be created with name of contact name and the household name should append to the contact name</doc>
+<tags>
+<tag>Demo5</tag>
+</tags>
+<status status="PASS" endtime="20180822 16:35:05.477" critical="yes" starttime="20180822 16:34:46.035"></status>
+</test>
+<test id="s1-t2" name="TC3">
+<kw type="setup" name="Login With Username And Password(1)" library="Common_Configure">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180822 16:35:05.480" level="INFO">Opening browser 'chrome' to base url 'https://test.salesforce.com'</msg>
+<status status="PASS" endtime="20180822 16:35:12.960" starttime="20180822 16:35:05.480"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180822 16:35:14.121" starttime="20180822 16:35:12.961"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${UsernameElement}</arg>
+<arg>nallavan@mstsolutions.com.qarel</arg>
+</arguments>
+<msg timestamp="20180822 16:35:14.122" level="INFO">Typing text 'nallavan@mstsolutions.com.qarel' into text field 'Id=username'</msg>
+<status status="PASS" endtime="20180822 16:35:14.829" starttime="20180822 16:35:14.122"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PasswordElement}</arg>
+<arg>metasoft@12</arg>
+</arguments>
+<msg timestamp="20180822 16:35:14.829" level="INFO">Typing text 'metasoft@12' into text field 'Id=password'</msg>
+<status status="PASS" endtime="20180822 16:35:15.057" starttime="20180822 16:35:14.829"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:15.058" level="INFO">Clicking button 'Id=Login'.</msg>
+<status status="PASS" endtime="20180822 16:35:21.174" starttime="20180822 16:35:15.057"></status>
+</kw>
+<status status="PASS" endtime="20180822 16:35:21.175" starttime="20180822 16:35:05.480"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>FirstName</arg>
+</arguments>
+<assign>
+<var>${FirstName_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.176" level="INFO">${FirstName_V} = Test Contact8</msg>
+<status status="PASS" endtime="20180822 16:35:21.176" starttime="20180822 16:35:21.175"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${FirstName_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.178" level="INFO">${FirstName_V} = Test Contact8</msg>
+<status status="PASS" endtime="20180822 16:35:21.178" starttime="20180822 16:35:21.177"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC2</arg>
+<arg>LastName</arg>
+</arguments>
+<assign>
+<var>${LastName_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.179" level="INFO">${LastName_V} = QA11</msg>
+<status status="PASS" endtime="20180822 16:35:21.179" starttime="20180822 16:35:21.178"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${LastName_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.181" level="INFO">${LastName_V} = QA11</msg>
+<status status="PASS" endtime="20180822 16:35:21.181" starttime="20180822 16:35:21.180"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>SpouseName</arg>
+</arguments>
+<assign>
+<var>${SpouseName_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.182" level="INFO">${SpouseName_V} = Test3</msg>
+<status status="PASS" endtime="20180822 16:35:21.183" starttime="20180822 16:35:21.182"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${SpouseName_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.184" level="INFO">${SpouseName_V} = Test3</msg>
+<status status="PASS" endtime="20180822 16:35:21.184" starttime="20180822 16:35:21.183"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>MailingStreet</arg>
+</arguments>
+<assign>
+<var>${Mail_Street_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.186" level="INFO">${Mail_Street_V} = Test Mailing Street 22</msg>
+<status status="PASS" endtime="20180822 16:35:21.186" starttime="20180822 16:35:21.185"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_Street_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.188" level="INFO">${Mail_Street_V} = Test Mailing Street 22</msg>
+<status status="PASS" endtime="20180822 16:35:21.188" starttime="20180822 16:35:21.187"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>MailingCity</arg>
+</arguments>
+<assign>
+<var>${Mail_City_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.189" level="INFO">${Mail_City_V} = Test Mailing City3</msg>
+<status status="PASS" endtime="20180822 16:35:21.189" starttime="20180822 16:35:21.188"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_City_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.190" level="INFO">${Mail_City_V} = Test Mailing City3</msg>
+<status status="PASS" endtime="20180822 16:35:21.191" starttime="20180822 16:35:21.190"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>MailingState</arg>
+</arguments>
+<assign>
+<var>${Mail_State_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.192" level="INFO">${Mail_State_V} = Test State 3</msg>
+<status status="PASS" endtime="20180822 16:35:21.192" starttime="20180822 16:35:21.191"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_State_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.193" level="INFO">${Mail_State_V} = Test State 3</msg>
+<status status="PASS" endtime="20180822 16:35:21.193" starttime="20180822 16:35:21.192"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>MailingZipCode</arg>
+</arguments>
+<assign>
+<var>${Mail_Code_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.194" level="INFO">${Mail_Code_V} = 79235</msg>
+<status status="PASS" endtime="20180822 16:35:21.194" starttime="20180822 16:35:21.194"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_Code_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.195" level="INFO">${Mail_Code_V} = 79235</msg>
+<status status="PASS" endtime="20180822 16:35:21.195" starttime="20180822 16:35:21.195"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>MailingCountry</arg>
+</arguments>
+<assign>
+<var>${Mail_Country_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.196" level="INFO">${Mail_Country_V} = Test Country</msg>
+<status status="PASS" endtime="20180822 16:35:21.196" starttime="20180822 16:35:21.196"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Mail_Country_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.197" level="INFO">${Mail_Country_V} = Test Country</msg>
+<status status="PASS" endtime="20180822 16:35:21.198" starttime="20180822 16:35:21.197"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>Email</arg>
+</arguments>
+<assign>
+<var>${Contact_Email_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.200" level="INFO">${Contact_Email_V} = nallavan26@yopmail.com</msg>
+<status status="PASS" endtime="20180822 16:35:21.200" starttime="20180822 16:35:21.199"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Contact_Email_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.201" level="INFO">${Contact_Email_V} = nallavan26@yopmail.com</msg>
+<status status="PASS" endtime="20180822 16:35:21.201" starttime="20180822 16:35:21.200"></status>
+</kw>
+<kw name="Read Excel Data" library="ExcelUtilities">
+<arguments>
+<arg>Contact</arg>
+<arg>TC3</arg>
+<arg>BirthDate</arg>
+</arguments>
+<assign>
+<var>${Birth_Date_V}</var>
+</assign>
+<msg timestamp="20180822 16:35:21.202" level="INFO">${Birth_Date_V} = 11/7/1992</msg>
+<status status="PASS" endtime="20180822 16:35:21.202" starttime="20180822 16:35:21.201"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Birth_Date_V}</arg>
+</arguments>
+<msg timestamp="20180822 16:35:21.202" level="INFO">${Birth_Date_V} = 11/7/1992</msg>
+<status status="PASS" endtime="20180822 16:35:21.203" starttime="20180822 16:35:21.202"></status>
+</kw>
+<kw name="Contact Creation" library="Contact">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${Contact_Tab_E}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180822 16:35:24.173" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20180822 16:35:24.173" starttime="20180822 16:35:24.145"></status>
+</kw>
+<msg timestamp="20180822 16:35:24.173" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20180822 16:35:24.177" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20180822 16:35:24.177" starttime="20180822 16:35:21.203"></status>
+</kw>
+<status status="FAIL" endtime="20180822 16:35:24.178" starttime="20180822 16:35:21.203"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180822 16:35:27.432" starttime="20180822 16:35:24.178"></status>
+</kw>
+<doc>*Functionality*
+To verify whether the household account record is created or not when creating a household contact
+*Steps*
+1. Open the new instance sandbox "test.salesforce.com"
+2. Enter the username and password
+3. Click login button
+4. Click new button and then choose the recortype
+5. Click continue button
+6. Enter the firstname, last name and other details
+7. Click save buttom
+8. Verif the expected result
+*Expected Result*
+Household account record should be created with name of contact name and the household name should append to the contact name</doc>
+<tags>
+<tag>DemoTest</tag>
+</tags>
+<status status="FAIL" endtime="20180822 16:35:27.432" critical="yes" starttime="20180822 16:35:05.479">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<test id="s1-t3" name="TC5">
+<kw type="setup" name="Login With Username And Password(1)" library="Common_Configure">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180822 16:35:27.441" level="INFO">Opening browser 'chrome' to base url 'https://test.salesforce.com'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180822 16:35:35.440" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20180822 16:35:35.441" starttime="20180822 16:35:31.411"></status>
+</kw>
+<msg timestamp="20180822 16:35:35.441" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20180822 16:35:35.447" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20180822 16:35:35.448" starttime="20180822 16:35:27.441"></status>
+</kw>
+<status status="FAIL" endtime="20180822 16:35:35.449" starttime="20180822 16:35:27.440"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180822 16:35:38.464" starttime="20180822 16:35:35.451"></status>
+</kw>
+<doc>*Functionality*
+To verify whether the organization donor proxy contact record is created or not when creating a organization account
+*Steps*
+1. Open the new instance sandbox "test.salesforce.com"
+2. Enter the username and password
+3. Click login button and then navigates to account object
+4. Click new button and then choose the recortype
+5. Click continue button
+6. Enter the account name and other details
+7. Click save buttom
+8. Verif the expected result
+*Expected Result*
+Organization donor proxy contact record should be created with name of the Account name</doc>
+<tags>
+<tag>Demo</tag>
+</tags>
+<status status="FAIL" endtime="20180822 16:35:38.465" critical="yes" starttime="20180822 16:35:27.438">Setup failed:
+WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<test id="s1-t4" name="TC_6">
+<kw name="Ministry_Signup_form" library="Signup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://qarel-adflegalv2.cs21.force.com/payment/MC_Memberjoin_VF</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180822 16:35:38.475" level="INFO">Opening browser 'chrome' to base url 'https://qarel-adflegalv2.cs21.force.com/payment/MC_Memberjoin_VF'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180822 16:35:46.985" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20180822 16:35:46.985" starttime="20180822 16:35:42.948"></status>
+</kw>
+<msg timestamp="20180822 16:35:46.985" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20180822 16:35:46.991" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" endtime="20180822 16:35:46.991" starttime="20180822 16:35:38.474"></status>
+</kw>
+<status status="FAIL" endtime="20180822 16:35:46.992" starttime="20180822 16:35:38.473"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180822 16:35:50.008" starttime="20180822 16:35:46.994"></status>
+</kw>
+<doc>*Functionality*
+To verify whether the organization donor proxy contact record is created or not when creating a organization account
+*Steps*
+1. Open the new instance sandbox "test.salesforce.com"
+2. Enter the username and password
+3. Click login button and then navigates to account object
+4. Click new button and then choose the recortype
+5. Click continue button
+6. Enter the account name and other details
+7. Click save buttom
+8. Verif the expected result
+*Expected Result*
+Organization donor proxy contact record should be created with name of the Account name</doc>
+<status status="FAIL" endtime="20180822 16:35:50.009" critical="yes" starttime="20180822 16:35:38.470">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20180822 16:35:50.014" starttime="20180822 16:34:45.638"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="1">Critical Tests</stat>
+<stat fail="3" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Demo</stat>
+<stat fail="0" pass="1">Demo5</stat>
+<stat fail="1" pass="0">DemoTest</stat>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="RegressionTestSuite" pass="1">RegressionTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180822 16:34:45.676" level="ERROR">Error in file 'C:\Users\Mstemp120\Downloads\Salesforce_Automation-Saleforce_Demo\Projects\ADF_Project\src\Salesforce_Objects\Contact.robot': Setting variable 'Contact Field Verification Webelements' failed: Invalid variable name 'Contact Field Verification Webelements'.</msg>
+<msg timestamp="20180822 16:34:45.690" level="ERROR">Error in file 'C:\Users\Mstemp120\Downloads\Salesforce_Automation-Saleforce_Demo\Projects\ADF_Project\src\Salesforce_Objects\Account.robot': Resource file 'C:\Users\Mstemp120\Downloads\Salesforce_Automation-Saleforce_Demo\Projects\ADF_Project\src\TestCases\RegressionTestSuite.robot' contains a test case table which is not allowed.</msg>
+<msg timestamp="20180822 16:34:45.823" level="ERROR">Error in file 'C:\Users\Mstemp120\Downloads\Salesforce_Automation-Saleforce_Demo\Projects\ADF_Project\src\Salesforce_Objects\Signup.robot': Resource file 'C:\Users\Mstemp120\Downloads\Salesforce_Automation-Saleforce_Demo\Projects\ADF_Project\src\TestCases\RegressionTestSuite.robot' contains a test case table which is not allowed.</msg>
+<msg timestamp="20180822 16:35:24.173" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20180822 16:35:35.441" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<msg timestamp="20180822 16:35:46.985" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+</errors>
+</robot>
