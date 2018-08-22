@@ -1,7 +1,7 @@
 import xlrd
 #import Test
 from xlrd.sheet import ctype_text
-xl_workbook = xlrd.open_workbook('../TestData/TestInputData.xlsx')
+xl_workbook = xlrd.open_workbook('E:/Desktop/DemoSalesforce/TestData/TestInputData.xlsx')
 def read_excel_data ( sheetname, testcase, title):
     cell_value= basestring
     sheet_name = xl_workbook.sheet_names()
@@ -19,5 +19,3 @@ def read_excel_data ( sheetname, testcase, title):
             cell_value = xl_sheet.cell(row_idx, col).value
             #print (cell_value)
     return cell_value
-
-
